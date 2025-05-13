@@ -1,0 +1,40 @@
+/* Base Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  color: #333;
+}
+
+header, section, footer {
+  margin-bottom: 30px;
+}
+
+h1, h2 {
+  color: #005a9c;
+}
+
+ul {
+  list-style-type: square;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    margin: 0;
+    color: black;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  footer {
+    display: none;
+  }
+
+  /* Add page break before each section (optional) */
+  section {
+    page-break-before: avoid;
+    page-break-after: auto;
+  }
+}
